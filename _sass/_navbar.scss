@@ -1,0 +1,45 @@
+.navbar-portfolio {
+  padding: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  z-index: 999;
+  font-family: $header-font-family;
+  .logo {
+    display: block;
+    font-size: 50px;
+    color: white;
+    p {
+      border-bottom: 6px solid $brand-color;
+      margin: 0;
+    }
+    &:hover {
+      text-decoration: none;
+    }
+  }
+  .nav-items {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex: 0 1 30%;
+    .nav-item {
+      &:hover .underline-animation {
+        width: 100%;
+      }
+      a {
+        color: $text-color;
+        text-decoration: none;
+        font-size: 23px;
+      }
+      .underline-animation {
+        width: 0px;
+        border-bottom: 4px solid $brand-color;
+        transition: width 200ms linear;
+      }
+    }
+  }
+}

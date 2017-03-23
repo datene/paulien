@@ -1,0 +1,40 @@
+---
+layout: default
+title: Paulien van Diepen portfolio | Projecten
+description: Portfolio van Paulien van Diepen - Projecten
+image: /images/paulien.jpg
+permalink: /projecten/
+background_image: http://unsplash.it/600/1000
+---
+<div class="wrench"></div>
+<div class="wrapper">
+  <div class="row">
+    {% for post in site.posts %}
+    <div class="col-xs-12 col-lg-6">
+      <div class="card-container">
+        <div class="card">
+          <div class="card-body">
+          <div class="card-image" style="background-image: url('{{ site.url  }}{{ site.baseurl  }}{{ post.background_image }}');">
+            </div>
+            <div class="card-back">
+              <h3>{{ post.title }}</h3>
+              <p>
+                {{ post.short_description }}
+              </p>
+              <a href="{{ post.url }}">Read more</a>
+            </div>
+          </div>
+        </div>
+        <div class="user-info">
+          <div class="description">
+            <img src="{{ site.url  }}{{ site.baseurl  }}{{ post.company_image }}" alt="" class="avatar avatar-small">
+            <h4>
+              {{ post.title }}
+            </h4>
+          </div>
+        </div>
+      </div>
+    </div>
+    {% endfor %}
+  </div>
+</div>
